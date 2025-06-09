@@ -1,4 +1,12 @@
-[
+[ 
+    {
+        "id": 1,
+        "photo": "https://via.placeholder.com/400x200?text=Movie+1",
+        "title": "အက်ရှင်ဇာတ်ကား ၁",
+        "duration": "1h 45m",
+        "description": "စိတ်လှုပ်ရှားဖွယ်ရာ အက်ရှင်ဇာတ်ကားပါ။ အလွန်ကြည့်လို့ကောင်းပါတယ်။",
+        "downloadLink": "https://megaup.com/link1"
+    },
     {
         "id": 1,
         "photo": "https://via.placeholder.com/400x200?text=Movie+1",
@@ -31,4 +39,5 @@
         "description": "စိတ်ခံစားမှုပြင်းထန်တဲ့ ဒရမ်မာဇာတ်ကားပါ။",
         "downloadLink": "https://exe.io/link4"
     }
+    
 ]
