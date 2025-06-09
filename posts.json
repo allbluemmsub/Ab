@@ -1,40 +1,40 @@
 [ 
     {
         "id": 5,
-        "photo": "https://via.placeholder.com/400x200?text=Movie+1",
-        "title": "အက်ရှင်ဇာတ်ကား 5",
+        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
+        "title": "အက်ရှင်5",
         "duration": "1h 45m",
         "description": "စိတ်လှုပ်ရှားဖွယ်ရာ။ အလွန်ကြည့်လို့ကောင်းပါတယ်။",
         "downloadLink": "https://megaup.com/link1"
     },
     {
         "id": 1,
-        "photo": "https://via.placeholder.com/400x200?text=Movie+1",
-        "title": "အက်ရှင်ဇာတ်ကား ၁",
+        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
+        "title": "အက်ရှင်၁",
         "duration": "1h 45m",
         "description": "စိတ်လှုပ်ရှားဖွယ်ရာ အက်ရှင်ဇာတ်ကားပါ။ အလွန်ကြည့်လို့ကောင်းပါတယ်။",
         "downloadLink": "https://megaup.com/link1"
     },
     {
         "id": 2,
-        "photo": "https://via.placeholder.com/400x200?text=Movie+2",
-        "title": "ဟာသဇာတ်ကား ၂",
+        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
+        "title": "ဟာသ ၂",
         "duration": "2h 05m",
         "description": "ရယ်မောပျော်ရွှင်ရမယ့် ဟာသဇာတ်ကားကောင်းပါ။",
         "downloadLink": "https://exe.io/link2"
     },
     {
         "id": 3,
-        "photo": "https://via.placeholder.com/400x200?text=Movie+3",
-        "title": "အချစ်ဇာတ်ကား ၃",
+        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
+        "title": "love<br>love3",
         "duration": "1h 30m",
-        "description": "ရင်ခုန်ကြည်နူးစရာ အချစ်ဇာတ်လမ်းလေးပါ။",
+        "description": "love",
         "downloadLink": "https://megaup.com/link3"
     },
     {
         "id": 4,
-        "photo": "https://via.placeholder.com/400x200?text=Movie+4",
-        "title": "ဒရမ်မာဇာတ်ကား ၄",
+        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
+        "title": "ဒရမ်မာ ၄",
         "duration": "2h 10m",
         "description": "စိတ်ခံစားမှုပြင်းထန်တဲ့ ဒရမ်မာဇာတ်ကားပါ။",
         "downloadLink": "https://exe.io/link4"
