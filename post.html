@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="postTitle">Post အသေးစိတ်</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for post.html */
+        .post-detail-container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .post-detail-container img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            object-fit: contain; /* ပုံအကြီးကြီးဖြစ်အောင် */
+            margin-bottom: 20px;
+        }
+        .post-detail-container h1 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .post-detail-container p {
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        .post-detail-container .download-link {
+            display: inline-block;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 15px;
+        }
+        .post-detail-container .download-link:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="post-detail-container">
+        <a href="index.html" style="text-decoration: none; color: #007bff; margin-bottom: 20px; display: block;">&larr; ပင်မစာမျက်နှာသို့ ပြန်သွားရန်</a>
+        <img id="detailPhoto" src="" alt="Post Photo">
+        <h1 id="detailTitle"></h1>
+        <p id="detailDuration"></p>
+        <p id="detailDescription"></p>
+        <a id="detailDownloadLink" class="download-link" href="#" target="_blank">Download Link</a>
+    </div>
+
+    <script src="post-script.js"></script>
+</body>
+</html>
