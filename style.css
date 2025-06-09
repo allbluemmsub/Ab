@@ -32,7 +32,7 @@ header {
 
 #posts-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* ၃ကွက် Grid Layout */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* ၃ကွက် Grid Layout */
     gap: 20px;
 }
 
