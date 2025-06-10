@@ -1,41 +1,3 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-    background-color: #f4f4f4;
-}
-
-header {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.search-container {
-    margin-top: 20px;
-}
-
-#searchInput {
-    padding: 10px;
-    width: 300px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#searchButton {
-    padding: 10px 15px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#posts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* ၃ကွက် Grid Layout */
-    gap: 20px;
-}
-
 .post-card {
     background-color: white;
     border-radius: 8px;
@@ -43,6 +5,7 @@ header {
     overflow: hidden;
     text-align: center;
     transition: transform 0.2s;
+    position: relative; /* duration ကို absolute နေရာချရန်အတွက် လိုအပ်သည် */
 }
 
 .post-card:hover {
@@ -50,20 +13,65 @@ header {
 }
 
 .post-card img {
-    width: 100px;
-    height: 50px;
+    width: 100%;
+    /* ဒီ height ကို သင်လိုချင်တဲ့အတိုင်း ပြန်ချိန်နိုင်ပါပြီ */
+    height: 100px; /* သင်လိုချင်တဲ့ 100px */
     object-fit: cover;
     display: block;
-    cursor: pointer; /* ပုံကို နှိပ်လို့ရအောင် */
+    cursor: pointer;
 }
 
+/* ခေါင်းစဉ် (title) စတိုင် (အပြောင်းအလဲမရှိ) */
 .post-card h3 {
-    margin: 15px 10px 5px;
+    margin: 10px 10px 5px;
     color: #333;
+    font-size: 1.1em;
 }
 
-.post-card p {
-    color: #666;
-    font-size: 0.9em;
-    margin-bottom: 15px;
+/* ကြာချိန် (duration) စတိုင် အသစ် - ပုံပေါ်မှာ ထားရန် */
+.post-card .duration-overlay {
+    position: absolute; /* ပုံပေါ်မှာ ထပ်ဆင့်ရန် */
+    top: 5px; /* အပေါ်ကနေ 5px ဆင်းပါ */
+    right: 5px; /* ညာဘက်ကနေ 5px ဝင်ပါ */
+    background-color: rgba(0, 0, 0, 0.7); /* အမဲရောင် နောက်ခံ ဖျော့ဖျော့လေး */
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.7em; /* စာလုံးအရွယ်အစား လိုအပ်ရင် ချိန်ညှိ */
+    z-index: 10; /* ပုံပေါ်မှာ သေချာပေါ်အောင် */
+}
+
+/* ဖုန်း screen အတွက် ၃ တန်းပေါ်စေရန် Grid Layout ကို ချိန်ညှိခြင်း */
+/* media query ကို style.css ရဲ့ အောက်ဆုံးမှာ ထည့်နိုင်သည် */
+@media (max-width: 768px) {
+    #posts-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 10px;
+    }
+    .post-card h3 {
+        font-size: 0.9em;
+        margin: 5px 5px 2px;
+    }
+    .post-card .duration-overlay { /* ဖုန်းအတွက် ကြာချိန်စာလုံးအသေး */
+        font-size: 0.6em;
+        padding: 2px 5px;
+    }
+}
+
+/* ပိုသေးတဲ့ ဖုန်းတွေအတွက် (optional) */
+@media (max-width: 480px) {
+    #posts-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    .post-card img {
+        height: 80px;
+    }
+    .post-card h3 {
+        font-size: 0.75em;
+    }
+    .post-card .duration-overlay { /* ပိုသေးတဲ့ ဖုန်းအတွက် ကြာချိန်စာလုံးအသေး */
+        font-size: 0.55em;
+        padding: 1px 3px;
+    }
 }
