@@ -13,9 +13,9 @@
 }
 
 .post-card img {
-    width: 100px;
+    width: 100%;
     /* ဒီ height ကို သင်လိုချင်တဲ့အတိုင်း ပြန်ချိန်နိုင်ပါပြီ */
-    height: 200px; /* သင်လိုချင်တဲ့ 100px */
+    height: 100px; /* သင်လိုချင်တဲ့ 100px */
     object-fit: cover;
     display: block;
     cursor: pointer;
