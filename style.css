@@ -1,10 +1,22 @@
+/* CSS Variables for easy theming */
+:root {
+    --primary-color: #007bff;
+    --primary-hover: #0056b3;
+    --play-button-color: #e74c3c;
+    --play-button-hover: #c0392b;
+    --download-button-color: #2ecc71;
+    --download-button-hover: #27ae60;
+    --text-color: #333;
+    --background-color: #f4f4f4;
+}
+
 /* General Body Styles */
 body {
     font-family: 'Myanmar Sans Pro', sans-serif; /* မြန်မာစာအတွက် */
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 /* Header Styles */
@@ -20,7 +32,7 @@ header {
 
 .header-top h1 {
     margin: 0;
-    color: #333;
+    color: var(--text-color);
     font-size: 1.8em;
 }
 
@@ -45,11 +57,11 @@ header {
 }
 
 #searchInput:focus {
-    border-color: #007bff;
+    border-color: var(--primary-color);
 }
 
 .menu-button {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     border-radius: 50%; /* အဝိုင်းပုံစံ */
@@ -65,8 +77,15 @@ header {
     transition: background-color 0.3s;
 }
 
-.menu-button:hover {
-    background-color: #0056b3;
+.menu-button:hover,
+.menu-button:focus {
+    background-color: var(--primary-hover);
+    outline: none;
+}
+
+.menu-button:focus {
+    outline: 2px solid var(--primary-hover);
+    outline-offset: 2px;
 }
 
 /* Sidebar Navigation */
@@ -79,7 +98,7 @@ header {
     left: 0; /* Change to 'right: 0' for right-side sidebar */
     background-color: #111;
     overflow-x: hidden;
-    transition: 0.5s; /* Smooth transition */
+    transition: width 0.5s ease;
     padding-top: 60px;
     box-shadow: 2px 0 5px rgba(0,0,0,0.5); /* Shadow for effect */
 }
@@ -90,11 +109,13 @@ header {
     font-size: 1.5em;
     color: #818181;
     display: block;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
-.sidebar a:hover {
+.sidebar a:hover,
+.sidebar a:focus {
     color: #f1f1f1;
+    outline: none;
 }
 
 .sidebar .closebtn {
@@ -102,11 +123,14 @@ header {
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+    cursor: pointer;
 }
 
+/* Removed margin-left: 50px; from closebtn because it's absolutely positioned */
+
+/* Main content with transition */
 #main {
-    transition: margin-left .5s; /* Smooth push effect for content */
+    transition: margin-left 0.5s ease; /* Smooth push effect for content */
     padding: 16px;
     margin-left: 0; /* Initially no push */
 }
@@ -131,9 +155,11 @@ header {
     transition: transform 0.2s;
     position: relative; /* Duration overlay အတွက် */
     padding-bottom: 10px; /* Text content အတွက် နေရာပိုပေးရန် */
+    will-change: transform;
 }
 
-.post-card:hover {
+.post-card:hover,
+.post-card:focus-within {
     transform: translateY(-5px);
 }
 
@@ -147,7 +173,7 @@ header {
 
 .post-card h3 {
     margin: 10px 10px 2px; /* title */
-    color: #333;
+    color: var(--text-color);
     font-size: 1.1em;
 }
 
@@ -178,7 +204,7 @@ header {
 }
 
 .page-button {
-    background-color: #007bff;
+    background-color: var(--primary-color);
     color: white;
     border: none;
     padding: 8px 15px;
@@ -189,12 +215,19 @@ header {
     transition: background-color 0.3s;
 }
 
-.page-button:hover {
-    background-color: #0056b3;
+.page-button:hover,
+.page-button:focus {
+    background-color: var(--primary-hover);
+    outline: none;
+}
+
+.page-button:focus {
+    outline: 2px solid var(--primary-hover);
+    outline-offset: 2px;
 }
 
 .page-button.active {
-    background-color: #0056b3;
+    background-color: var(--primary-hover);
     font-weight: bold;
 }
 
@@ -218,19 +251,21 @@ header {
     display: block;
     text-align: left; /* ဘယ်ဘက်ကနေ ပြန်သွားရန် စာသား */
     margin-bottom: 20px;
-    color: #007bff;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 1.1em;
     font-weight: bold;
 }
 
-.back-to-home:hover {
+.back-to-home:hover,
+.back-to-home:focus {
     text-decoration: underline;
+    outline: none;
 }
 
 .post-detail-container h2 {
     font-size: 2.2em; /* ပိုကြီးသော ခေါင်းစဉ် */
-    color: #333;
+    color: var(--text-color);
     margin-top: 20px; /* ပုံအောက်မှာ နေရာခြားရန် */
     margin-bottom: 5px;
 }
@@ -257,6 +292,7 @@ header {
     gap: 20px; /* ခလုတ်များကြား အကွာအဝေး */
     margin-top: 20px;
     margin-bottom: 30px;
+    flex-wrap: wrap; /* Mobile မှာ wrap ဖြစ်စေ */
 }
 
 .detail-button {
@@ -271,20 +307,25 @@ header {
     text-align: center;
     transition: background-color 0.3s;
     position: relative; /* Dropdown အတွက် */
+    cursor: pointer;
 }
 
 .play-button {
-    background-color: #e74c3c; /* Play button color */
+    background-color: var(--play-button-color);
 }
-.play-button:hover {
-    background-color: #c0392b;
+.play-button:hover,
+.play-button:focus {
+    background-color: var(--play-button-hover);
+    outline: none;
 }
 
 .download-button-detail {
-    background-color: #2ecc71; /* Download button color */
+    background-color: var(--download-button-color);
 }
-.download-button-detail:hover {
-    background-color: #27ae60;
+.download-button-detail:hover,
+.download-button-detail:focus {
+    background-color: var(--download-button-hover);
+    outline: none;
 }
 
 /* Dropdown Styles for Play/Download */
@@ -301,191 +342,5 @@ header {
     transform: translateX(-50%); /* အလယ်ချရန် */
     max-height: 200px; /* Scrollable if many links */
     overflow-y: auto;
-}
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-    border-radius: 8px;
-}
-
-.dropdown-content a:first-child { border-top-left-radius: 8px; border-top-right-radius: 8px; }
-.dropdown-content a:last-child { border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; }
-
-
-.dropdown.show .dropdown-content {
-    display: block;
-}
-
-/* Description */
-.post-detail-container .description {
-    font-size: 1em;
-    color: #444;
-    text-align: left; /* ဖော်ပြချက်ကို ဘယ်ဘက်က စရေးရန် */
-    margin-top: 20px;
-    line-height: 1.6;
-}
-
-/* Image Slider */
-.slider-container {
-    width: 100%;
-    overflow: hidden;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    position: relative; /* Arrows အတွက် */
-}
-
-.slider-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slider-item {
-    min-width: calc(100% / 4); /* 4 items per slide (desktop) */
-    box-sizing: border-box;
-    padding: 5px;
-}
-
-.slider-item img {
-    width: 100%;
-    height: 100px; /* Slider image height */
-    object-fit: cover;
-    border-radius: 5px;
-    display: block;
-}
-
-/* Slider Navigation Arrows */
-.slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    z-index: 1;
-    font-size: 1.5em;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slider-arrow.left {
-    left: 10px;
-}
-
-.slider-arrow.right {
-    right: 10px;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    /* Homepage */
-    #posts-grid {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* 2 or 3 columns on tablet/mobile */
-        gap: 15px;
-        padding: 10px;
-    }
-    .post-card img {
-        height: 180px; /* Tablet/Mobile image height */
-    }
-    .post-card h3 {
-        font-size: 1em;
-    }
-    .post-card .actor-name {
-        font-size: 0.8em;
-    }
-    .header-top h1 {
-        font-size: 1.5em;
-    }
-    #searchInput {
-        width: calc(100% - 50px);
-        max-width: unset;
-    }
-    .menu-button {
-        width: 35px;
-        height: 35px;
-        font-size: 1em;
-    }
-    .sidebar {
-        padding-top: 40px;
-        font-size: 1.2em;
-    }
-    .sidebar a {
-        font-size: 1.2em;
-    }
-
-    /* Post Detail Page */
-    .post-detail-container {
-        margin: 10px;
-        padding: 15px;
-    }
-    .post-detail-container h2 {
-        font-size: 1.8em;
-    }
-    .post-detail-container .actor-name-detail {
-        font-size: 1em;
-    }
-    .detail-buttons-container {
-        flex-direction: column; /* Mobile မှာ အပေါ်အောက် ထားရန် */
-        gap: 10px;
-    }
-    .detail-button {
-        max-width: 100%; /* Mobile မှာ width အပြည့်ယူရန် */
-    }
-    .slider-item {
-        min-width: calc(100% / 3); /* 3 items per slide on mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    /* Homepage */
-    #posts-grid {
-        grid-template-columns: repeat(2, 1fr); /* Small phone: 2 columns */
-        gap: 10px;
-        padding: 5px;
-    }
-    .post-card img {
-        height: 150px;
-    }
-    .post-card h3 {
-        font-size: 0.9em;
-    }
-    .post-card .actor-name {
-        font-size: 0.75em;
-    }
-    .header-top h1 {
-        font-size: 1.3em;
-    }
-    .search-container {
-        padding: 0 5px;
-    }
-    .menu-button {
-        width: 30px;
-        height: 30px;
-        font-size: 0.9em;
-    }
-    .sidebar a {
-        font-size: 1em;
-    }
-
-    /* Post Detail Page */
-    .post-detail-container h2 {
-        font-size: 1.5em;
-    }
-    .slider-item {
-        min-width: calc(100% / 2); /* 2 items per slide on very small mobile */
-    }
-}
+    scrollbar
