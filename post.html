@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="my">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="post-detail-container">
+        <a id="backToHomeLink" href="index.html" class="back-to-home">&larr; ပင်မစာမျက်နှာသို့ ပြန်သွားရန်</a>
+
+        <img id="detailPhoto" class="main-detail-photo" src="" alt="Post Photo">
+
+        <h2 id="detailTitle"></h2>
+        <p id="detailActor" class="actor-name-detail"></p>
+
+        <div class="detail-buttons-container">
+            <div class="detail-button play-button dropdown" id="playButton">
+                Play
+                <div class="dropdown-content" id="playDropdown">
+                    </div>
+            </div>
+            <div class="detail-button download-button-detail dropdown" id="downloadButton">
+                Download <i class="fas fa-download"></i>
+                <div class="dropdown-content" id="downloadDropdown">
+                    </div>
+            </div>
+        </div>
+
+        <div class="slider-container">
+            <div class="slider-wrapper" id="gallerySlider">
+                </div>
+            <button class="slider-arrow left" id="prevSlide">&#10094;</button>
+            <button class="slider-arrow right" id="nextSlide">&#10095;</button>
+        </div>
+
+        <p id="detailDescription" class="description"></p>
+
+        <p id="detailDuration" style="display: none;"></p>
+
+    </div>
+
+    <script src="post-script.js"></script>
+</body>
+</html>
