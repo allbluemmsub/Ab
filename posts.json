@@ -1,43 +1,47 @@
-[ 
-    {
-        "id": 5,
-        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
-        "title": "အက်ရှင်5",
-        "duration": "1h 45m",
-        "description": "စိတ်လှုပ်ရှားဖွယ်ရာ။ အလွန်ကြည့်လို့ကောင်းပါတယ်။",
-        "downloadLink": "https://megaup.com/link1"
-    },
+[
     {
         "id": 1,
-        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
-        "title": "အက်ရှင်၁",
+        "photo": "https://via.placeholder.com/600x900/FF0000/FFFFFF?text=Main+Movie+1",
+        "title": "Spider-man (Mmsub)",
         "duration": "1h 45m",
-        "description": "စိတ်လှုပ်ရှားဖွယ်ရာ အက်ရှင်ဇာတ်ကားပါ။ အလွန်ကြည့်လို့ကောင်းပါတယ်။",
-        "downloadLink": "https://megaup.com/link1"
+        "actor": "Tom Holland",
+        "category": "Action",
+        "description": "ပုံစံသစ်နဲ့ Marvel ထဲက Spider-man ဇာတ်လမ်းတစ်ပုဒ်ဖြစ်ပါတယ်။ ကြည့်လို့ကောင်းတဲ့ အက်ရှင်ကားကောင်းတစ်ကားပါ။",
+        "playLinks": [
+            {"name": "Play Link 1", "url": "https://example.com/play1"},
+            {"name": "Play Link 2", "url": "https://example.com/play2"},
+            {"name": "Play Link 3", "url": "https://example.com/play3"}
+        ],
+        "downloadLinks": [
+            {"name": "Download Link 1", "url": "https://example.com/download1"},
+            {"name": "Download Link 2", "url": "https://example.com/download2"},
+            {"name": "Download Link 3", "url": "https://example.com/download3"}
+        ],
+        "galleryPhotos": [
+            "https://via.placeholder.com/150x100/ADD8E6/000000?text=Slide+1",
+            "https://via.placeholder.com/150x100/F08080/000000?text=Slide+2",
+            "https://via.placeholder.com/150x100/90EE90/000000?text=Slide+3",
+            "https://via.placeholder.com/150x100/DDA0DD/000000?text=Slide+4"
+        ]
     },
     {
         "id": 2,
-        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
-        "title": "ဟာသ ၂",
-        "duration": "2h 05m",
-        "description": "ရယ်မောပျော်ရွှင်ရမယ့် ဟာသဇာတ်ကားကောင်းပါ။",
-        "downloadLink": "https://exe.io/link2"
-    },
-    {
-        "id": 3,
-        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
-        "title": "love<br>love3",
-        "duration": "1h 30m",
-        "description": "love",
-        "downloadLink": "https://megaup.com/link3"
-    },
-    {
-        "id": 4,
-        "photo": "https://i.postimg.cc/k5kW2PCf/images-2.jpg",
-        "title": "ဒရမ်မာ ၄",
+        "photo": "https://via.placeholder.com/600x900/00FF00/FFFFFF?text=Movie+2",
+        "title": "ဟာသဇာတ်ကား ၉",
         "duration": "2h 10m",
-        "description": "စိတ်ခံစားမှုပြင်းထန်တဲ့ ဒရမ်မာဇာတ်ကားပါ။",
-        "downloadLink": "https://exe.io/link4"
+        "actor": "နေတိုး",
+        "category": "Comedy",
+        "description": "ကြည့်ရှုသူကို ရယ်မောပျော်ရွှင်စေမည့် ဟာသဇာတ်ကားကောင်း တစ်ပုဒ်။",
+        "playLinks": [
+            {"name": "Play Link A", "url": "https://example.com/playA"},
+            {"name": "Play Link B", "url": "https://example.com/playB"}
+        ],
+        "downloadLinks": [
+            {"name": "Download Link X", "url": "https://example.com/downloadX"}
+        ],
+        "galleryPhotos": [
+            "https://via.placeholder.com/150x100/A2B5CD/000000?text=Comedy+1",
+            "https://via.placeholder.com/150x100/E1B8F5/000000?text=Comedy+2"
+        ]
     }
-    
 ]
