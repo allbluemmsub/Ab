@@ -18,10 +18,10 @@
             {"name": "Download Link 3", "url": "https://example.com/download3"}
         ],
         "galleryPhotos": [
-            "https://via.placeholder.com/150x100/ADD8E6/000000?text=Slide+1",
-            "https://via.placeholder.com/150x100/F08080/000000?text=Slide+2",
-            "https://via.placeholder.com/150x100/90EE90/000000?text=Slide+3",
-            "https://via.placeholder.com/150x100/DDA0DD/000000?text=Slide+4"
+            "https://i.postimg.cc/6QY4FDxL/images-4.jpg",
+            "https://i.postimg.cc/6QY4FDxL/images-4.jpg",
+            "https://i.postimg.cc/6QY4FDxL/images-4.jpg",
+            "https://i.postimg.cc/6QY4FDxL/images-4.jpg"
         ]
     },
     {
@@ -40,8 +40,8 @@
             {"name": "Download Link X", "url": "https://example.com/downloadX"}
         ],
         "galleryPhotos": [
-            "https://via.placeholder.com/150x100/A2B5CD/000000?text=Comedy+1",
-            "https://via.placeholder.com/150x100/E1B8F5/000000?text=Comedy+2"
+            "https://i.postimg.cc/6QY4FDxL/images-4.jpg",
+            "https://i.postimg.cc/6QY4FDxL/images-4.jpg"
         ]
     }
 ]
